@@ -1,4 +1,27 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div>
-  这里是测试
+  {{name}}
 </div>
+<div *ngIf='show'>
+  {{address|json}}
+</div>
+<div *ngFor='let i of arr'>
+  {{i}}
+</div>
+<button (click)="toggleSkills()">
+  {{ showSkills ? "隐藏技能" : "显示技能" }}
+</button>
+
+<form (submit)="addSkill(skill.value)">
+  <label>添加技能</label>
+  <input type="text" #skill>
+  <input type="submit" value="确定">
+</form>
+
+
+<ul *ngIf="courses$ | async as courses else noData">
+    <li *ngFor="let course of courses">
+        {{course.description}}
+    </li> 
+</ul>
+<ng-template #noData>No Data Available</ng-template>
