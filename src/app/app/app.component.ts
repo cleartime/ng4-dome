@@ -7,7 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-  abc = '12312'
+  testInput = {
+    a:1,
+    b:2
+  };
 
 
   test(){
