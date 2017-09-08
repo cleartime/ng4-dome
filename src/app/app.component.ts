@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
   abc = '12312'
+
+
+  test(){
+    alert(1)
+  }
 }
