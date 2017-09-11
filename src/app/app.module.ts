@@ -3,11 +3,16 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 
 
 import { AppComponent } from './app/app.component';
 import { TestComponent } from './test/test.component';
+
+
+export const ROUTES: Routes = [
+  { path: 'test', component: TestComponent }
+];
 
 @NgModule({
   declarations: [
@@ -19,11 +24,12 @@ import { TestComponent } from './test/test.component';
     BrowserModule,
     HttpModule,
     HttpClientModule,
-    RouterModule
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
 
 
