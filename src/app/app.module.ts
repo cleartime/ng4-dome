@@ -10,6 +10,9 @@ import { AppComponent } from './app/app.component';
 import { TestComponent } from './test/test.component';
 
 
+import { MemberService } from './service';
+
+
 export const ROUTES: Routes = [
   { path: 'test', component: TestComponent }
 ];
@@ -26,10 +29,13 @@ export const ROUTES: Routes = [
     HttpClientModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [],
+  providers: [MemberService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
 
 
-
+export class MembersComponent implements OnInit {
+   // ...
+   constructor(private memberService: MemberService) { }
+}
