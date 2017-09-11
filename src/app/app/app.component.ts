@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { MemberService } from "../service";
+import { Service } from "../service";
 
 @Component({
   selector: 'app-root',
@@ -9,18 +9,21 @@ import { MemberService } from "../service";
 })
 export class AppComponent implements OnInit{
 
-    constructor(private memberService: MemberService) { }
+    constructor(private service: Service) { }
 
     ngOnInit() {
-        this.memberService.getMembers()
+        this.service.getMembers()
           .subscribe(data => {
               console.log(data)
           });
     }
 
   submit(con, phone){
-    let conStr = con.trim();
-    let phoneStr = phone.trim();
-    console.log(conStr,phoneStr)
+    let alert = con.trim();
+    let mobiles = phone.trim();
+    this.service.jiguangPush({alert,mobiles,pushType:1})
+          .subscribe(data => {
+              console.log(data)
+          });
   }
 }

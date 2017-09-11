@@ -10,7 +10,7 @@ import { AppComponent } from './app/app.component';
 import { TestComponent } from './test/test.component';
 
 
-import { MemberService } from './service';
+import { Service } from './service';
 
 
 export const ROUTES: Routes = [
@@ -29,7 +29,7 @@ export const ROUTES: Routes = [
     HttpClientModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [MemberService],
+  providers: [Service],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
