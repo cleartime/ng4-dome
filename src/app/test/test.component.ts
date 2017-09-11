@@ -11,5 +11,6 @@ interface Member {
     <p>测试页面</p>
     `
 })
+
 export class TestComponent {
 }
