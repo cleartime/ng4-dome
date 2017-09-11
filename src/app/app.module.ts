@@ -33,9 +33,3 @@ export const ROUTES: Routes = [
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-
-export class MembersComponent implements OnInit {
-   // ...
-   constructor(private memberService: MemberService) { }
-}
