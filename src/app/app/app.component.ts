@@ -19,6 +19,8 @@ export class AppComponent implements OnInit{
     }
 
   submit(con, phone){
-    console.log(con,phone)
+    let conStr = con.trim();
+    let phoneStr = phone.trim();
+    console.log(conStr,phoneStr)
   }
 }
