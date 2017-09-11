@@ -1,6 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <h2>消息推送内部运营平台</h2>
-<form (submit)="submit(content.value, phone.value)">
+<form>
   <dl>
     <dt>推送消息</dt>
     <dd><textarea rows="" cols="" placeholder="请你输入推送内容" #content></textarea></dd>
@@ -9,7 +9,8 @@
     <dt>手机号码</dt>
     <dd><input type="number" name="" value="" placeholder="请输入手机号码" #phone></dd>
   </dl>
-  <input type="submit" name="" value="确认">
+  <a (click)='submit(0,content.value, phone.value)'>推送全部</a>
+  <a (click)='submit(1,content.value, phone.value)'>推送目标用户</a>
 </form>
 <span routerLink="/test">点击测试</span>
 <!-- <ul>
