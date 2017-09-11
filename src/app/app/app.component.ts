@@ -6,14 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-  testInput = {
-    a:1,
-    b:2
-  };
 
-
-  test(){
-    alert(1)
+  submit(con, phone){
+    console.log(con,phone)
   }
 }
