@@ -9,20 +9,8 @@
     <dt>手机号码</dt>
     <dd><input type="number" name="" value="" placeholder="请输入手机号码" #phone></dd>
   </dl>
-  <a (click)='submit(0,content.value, phone.value)'>推送全部</a>
-  <a (click)='submit(1,content.value, phone.value)'>推送目标用户</a>
+  <button (click)='submit(0,content.value, phone.value)'>推送全部</button>
+  <button (click)='submit(1,content.value, phone.value)'>推送目标用户</button>
 </form>
-<span routerLink="/test">点击测试</span>
-<!-- <ul>
-  <li>
-    <input type="" name="" value="">
-  </li>
-  <li>
-    <h2><a routerLink="/test">test</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://blog.angular.io//">Angular blog</a></h2>
-  </li>
-</ul> -->
-
-<router-outlet></router-outlet>
+<!-- <span routerLink="/test">点击测试</span> -->
+<!-- <router-outlet></router-outlet> -->

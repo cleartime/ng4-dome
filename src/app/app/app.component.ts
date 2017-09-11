@@ -12,17 +12,25 @@ export class AppComponent implements OnInit{
     constructor(private service: Service) { }
 
     ngOnInit() {
-        this.service.getMembers()
-          .subscribe(data => {
-              console.log(data)
-          });
+        // this.service.getMembers()
+        //   .subscribe(data => {
+        //       console.log(data)
+        //   });
     }
 
   submit(type, con, phone){
-    let alert = con.trim();
+    let content = con.trim();
     let mobiles = phone.trim();
+    if(!content.length){
+      alert(`请输入推送内容`)
+      return
+    }
+    if(type&&!mobiles){
+      alert(`请输入手机号码`)
+      return
+    }
     let opt = {
-      alert,
+      content,
       mobiles,
       pushType:1
     }
@@ -31,8 +39,8 @@ export class AppComponent implements OnInit{
       delete opt.mobiles;
     }
     this.service.jiguangPush(opt)
-          .subscribe(data => {
-              console.log(data)
-          });
+      .subscribe(data => {
+          console.log(data)
+      });
   }
 }
