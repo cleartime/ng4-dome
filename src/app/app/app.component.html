@@ -1,9 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <h2>消息推送内部运营平台</h2>
+<form (submit)="addSkill(skill.value)">
 <dl>
-  <dt></dt>
-  <dd></dd>
+  <dt>推送消息</dt>
+  <dd><textarea rows="" cols="" placeholder="请你输入推送内容" #content></textarea></dd>
 </dl>
+<dl>
+  <dt>手机号码</dt>
+  <dd><input type="number" name="" value="" placeholder="请输入手机号码" #phone></dd>
+</dl>
+<input type="submit" name="" value="确认">
+</form>
 <ul>
   <li>
     <input type="" name="" value="">
